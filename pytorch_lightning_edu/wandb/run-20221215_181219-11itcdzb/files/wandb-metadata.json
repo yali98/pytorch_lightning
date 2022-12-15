@@ -1,0 +1,125 @@
+{
+    "os": "Linux-5.15.0-56-generic-x86_64-with-glibc2.29",
+    "python": "3.8.10",
+    "heartbeatAt": "2022-12-15T09:12:20.544104",
+    "startedAt": "2022-12-15T09:12:19.165056",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "naver_classification.py",
+    "codePath": "pytorch_lightning_edu/naver_classification.py",
+    "git": {
+        "remote": "https://github.com/yali98/pytorch_lightning.git",
+        "commit": "76015e87989c3ba816ef5891d2387be1b7a69c6a"
+    },
+    "email": "yali98@naver.com",
+    "root": "/home/nlplab12/Jang/pytorch_lightning",
+    "host": "nlplab12-Z490-AORUS-ELITE",
+    "username": "nlplab12",
+    "executable": "/usr/bin/python3",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 3767.7455,
+        "min": 800.0,
+        "max": 5100.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3800.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3800.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3800.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3800.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3800.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3800.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3800.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3800.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3800.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3800.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3800.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3800.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3283.928,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3800.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3800.0,
+            "min": 800.0,
+            "max": 5100.0
+        },
+        {
+            "current": 3800.0,
+            "min": 800.0,
+            "max": 5100.0
+        }
+    ],
+    "disk": {
+        "total": 914.3848724365234,
+        "used": 33.89601516723633
+    },
+    "gpu": "NVIDIA GeForce GTX 1080 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1080 Ti",
+            "memory_total": 11811160064
+        }
+    ],
+    "memory": {
+        "total": 15.547855377197266
+    }
+}

@@ -1,0 +1,112 @@
+Using custom data configuration default-280267f50cc0f57f
+Found cached dataset csv (/home/nlplab12/.cache/huggingface/datasets/csv/default-280267f50cc0f57f/0.0.0/6b34fb8fcf56f7c8ba51dc895bfa2bfbe43546f190a60fcf74bb5e8afdcc2317)
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 999.12it/s]
+35000
+Some weights of the model checkpoint at monologg/koelectra-base-v3-discriminator were not used when initializing ElectraForSequenceClassification: ['discriminator_predictions.dense_prediction.bias', 'discriminator_predictions.dense.weight', 'discriminator_predictions.dense.bias', 'discriminator_predictions.dense_prediction.weight']
+- This IS expected if you are initializing ElectraForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing ElectraForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of ElectraForSequenceClassification were not initialized from the model checkpoint at monologg/koelectra-base-v3-discriminator and are newly initialized: ['classifier.dense.weight', 'classifier.dense.bias', 'classifier.out_proj.weight', 'classifier.out_proj.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading cached processed dataset at /home/nlplab12/.cache/huggingface/datasets/csv/default-280267f50cc0f57f/0.0.0/6b34fb8fcf56f7c8ba51dc895bfa2bfbe43546f190a60fcf74bb5e8afdcc2317/cache-3e775a62ad91b9dd.arrow
+Loading cached processed dataset at /home/nlplab12/.cache/huggingface/datasets/csv/default-280267f50cc0f57f/0.0.0/6b34fb8fcf56f7c8ba51dc895bfa2bfbe43546f190a60fcf74bb5e8afdcc2317/cache-11d7db9c3b04ecf5.arrow
+Loading cached shuffled indices for dataset at /home/nlplab12/.cache/huggingface/datasets/csv/default-280267f50cc0f57f/0.0.0/6b34fb8fcf56f7c8ba51dc895bfa2bfbe43546f190a60fcf74bb5e8afdcc2317/cache-8cede8cc0cfff179.arrow
+Loading cached shuffled indices for dataset at /home/nlplab12/.cache/huggingface/datasets/csv/default-280267f50cc0f57f/0.0.0/6b34fb8fcf56f7c8ba51dc895bfa2bfbe43546f190a60fcf74bb5e8afdcc2317/cache-9cd6f25650974ace.arrow
+{'Unnamed: 0': 0, 'document': '굳', 'label': 1}
+512
+Using cuda_amp half precision backend
+The following columns in the training set don't have a corresponding argument in `ElectraForSequenceClassification.forward` and have been ignored: Unnamed: 0, document. If Unnamed: 0, document are not expected by `ElectraForSequenceClassification.forward`,  you can safely ignore this message.
+/home/nlplab12/.local/lib/python3.8/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 48776
+  Num Epochs = 10
+  Instantaneous batch size per device = 32
+  Total train batch size (w. parallel, distributed & accumulation) = 32
+  Gradient Accumulation steps = 1
+  Total optimization steps = 15250
+  Number of trainable parameters = 112922882
+Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
+  0%|                                                                                                                                                                                                         | 0/15250 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "naver_classification.py", line 70, in <module>
+    trainer.train()
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/trainer.py", line 1527, in train
+    return inner_training_loop(
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/trainer.py", line 1775, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/trainer.py", line 2523, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/trainer.py", line 2555, in compute_loss
+    outputs = model(**inputs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/models/electra/modeling_electra.py", line 1006, in forward
+    discriminator_hidden_states = self.electra(
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/models/electra/modeling_electra.py", line 920, in forward
+    hidden_states = self.encoder(
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/models/electra/modeling_electra.py", line 588, in forward
+    layer_outputs = layer_module(
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/models/electra/modeling_electra.py", line 473, in forward
+    self_attention_outputs = self.attention(
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/models/electra/modeling_electra.py", line 400, in forward
+    self_outputs = self.self(
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/models/electra/modeling_electra.py", line 330, in forward
+    attention_probs = self.dropout(attention_probs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/torch/nn/modules/dropout.py", line 59, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/torch/nn/functional.py", line 1252, in dropout
+    return _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 384.00 MiB (GPU 0; 10.91 GiB total capacity; 9.76 GiB already allocated; 122.19 MiB free; 10.18 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Traceback (most recent call last):
+  File "naver_classification.py", line 70, in <module>
+    trainer.train()
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/trainer.py", line 1527, in train
+    return inner_training_loop(
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/trainer.py", line 1775, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/trainer.py", line 2523, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/trainer.py", line 2555, in compute_loss
+    outputs = model(**inputs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/models/electra/modeling_electra.py", line 1006, in forward
+    discriminator_hidden_states = self.electra(
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/models/electra/modeling_electra.py", line 920, in forward
+    hidden_states = self.encoder(
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/models/electra/modeling_electra.py", line 588, in forward
+    layer_outputs = layer_module(
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/models/electra/modeling_electra.py", line 473, in forward
+    self_attention_outputs = self.attention(
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/models/electra/modeling_electra.py", line 400, in forward
+    self_outputs = self.self(
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/transformers/models/electra/modeling_electra.py", line 330, in forward
+    attention_probs = self.dropout(attention_probs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/torch/nn/modules/dropout.py", line 59, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/home/nlplab12/.local/lib/python3.8/site-packages/torch/nn/functional.py", line 1252, in dropout
+    return _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 384.00 MiB (GPU 0; 10.91 GiB total capacity; 9.76 GiB already allocated; 122.19 MiB free; 10.18 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
